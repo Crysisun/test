@@ -10,7 +10,7 @@ public class BankAccount {
         customerName = "Qingyu";
         email = "qingyusu@usc.edu";
         phoneNumber = 2132454730;
-        System.out.println("You can deposit, withdraw and check account balance.");
+        System.out.println("You can deposit, withdraw and check account balance. Start by typing \"balance\", \"deposit\", \"withdraw\", and \"info\", or \"quit\".");
     }
     public void deposit(int amount) {
         balance += amount;
@@ -22,11 +22,15 @@ public class BankAccount {
         }
         balance -= amount;
     }
-    public void printInfo() {
-        System.out.println(customerName);
-        System.out.println(accountNumber);
+    public void showBalance() {
         System.out.println(balance);
-        System.out.println(email);
-        System.out.println(phoneNumber);
+        return;
+    }
+    public void printInfo() {
+        System.out.println("Customer's name: " + customerName);
+        System.out.println("Account number " + accountNumber);
+        System.out.println("Current balance: " + balance);
+        System.out.println("Email: " + email);
+        System.out.println("Phone number: " + phoneNumber);
     }
 }
