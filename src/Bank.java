@@ -12,18 +12,18 @@ public class Bank {
                     break;
                 case "deposit":
                     System.out.println("Please type in the amount you want to deposit: ");
-                    if (!scanner.hasNextInt()) {
+                    if (!scanner.hasNextDouble()) {
                         System.out.println("You should type in numbers.");
                     } else {
-                        acc.deposit(scanner.nextInt());
+                        acc.deposit(scanner.nextDouble());
                     }
                     break;
                 case "withdraw":
                     System.out.println("Please type in the amount you want to withdraw: ");
-                    if (!scanner.hasNextInt()) {
+                    if (!scanner.hasNextDouble()) {
                         System.out.println("You should type in numbers.");
                     } else {
-                        acc.withdraw(scanner.nextInt());
+                        acc.withdraw(scanner.nextDouble());
                     }
                     break;
                 case "info":
@@ -31,9 +31,6 @@ public class Bank {
                     break;
                 case "quit":
                     return;
-                default:
-                    System.out.println("Please type in valid command.");
-                    break;
             }
         }
 
