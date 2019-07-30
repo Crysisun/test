@@ -13,14 +13,21 @@ public class BankAccount {
         System.out.println("You can deposit, withdraw and check account balance. Start by typing \"balance\", \"deposit\", \"withdraw\", and \"info\", or \"quit\".");
     }
     public void deposit(int amount) {
-        balance += amount;
+        if (amount > 50) {
+            System.out.println("Unsuccessful! You can only deposit 50 dollars at each time.");
+        } else {
+            balance += amount;
+            System.out.println("Successful!");
+        }
     }
     public void withdraw(int amount) {
         if (amount > balance) {
-            System.out.println("Insufficient funds " + customerName);
-            return;
+            System.out.println("Unsuccessful! Insufficient funds, " + customerName);
+        } else {
+            balance -= amount;
+            System.out.println("Successful!");
         }
-        balance -= amount;
+
     }
     public void showBalance() {
         System.out.println(balance);
@@ -28,7 +35,7 @@ public class BankAccount {
     }
     public void printInfo() {
         System.out.println("Customer's name: " + customerName);
-        System.out.println("Account number " + accountNumber);
+        System.out.println("Account number: " + accountNumber);
         System.out.println("Current balance: " + balance);
         System.out.println("Email: " + email);
         System.out.println("Phone number: " + phoneNumber);

@@ -16,7 +16,6 @@ public class Bank {
                         System.out.println("You should type in numbers.");
                     } else {
                         acc.deposit(scanner.nextInt());
-                        System.out.println("Successful!");
                     }
                     break;
                 case "withdraw":
