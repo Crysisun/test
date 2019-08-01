@@ -3,6 +3,6 @@ public class Calculator {
         if (x == null || y == null) {
             return null;
         }
-        return x / y;
+        return x + y;
     }
 }
