@@ -1,7 +1,9 @@
 import java.util.*;
+import java.sql.*;
 
 public class Bank {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+
         BankAccount acc = new BankAccount();
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
